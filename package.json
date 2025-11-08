@@ -2,7 +2,7 @@
   "name": "radio-gossip",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ecunniet.github.io/radiogossip",
+  "homepage": "https://radiogossip.fr",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
