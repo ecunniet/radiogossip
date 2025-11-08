@@ -5,7 +5,7 @@
   "homepage": "https://ecunniet.github.io/radiogossip",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "deploy": "gh-pages -d out --dotfiles"
   },
