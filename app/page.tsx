@@ -9,11 +9,11 @@ export default function Home() {
           className="dark:invert"
           src={"/radio.svg"}
           alt="Radio Gossip Logo"
-          width={300}
+          width={500}
           height={100}
           priority
         />
-        <div>
+        <div className="flex flex-col items-center justify-center text-[#2d1707]">
           <h1 className="text-4xl font-bold mb-4 text-center">
             Bienvenue sur Radio Gossip
           </h1>
@@ -22,7 +22,7 @@ export default function Home() {
           </p>
           <Link
             href="/show/1"
-            className="mt-8 inline-block bg-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition"
+            className="mt-8 inline-block bg-[#cf392c] text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-[#d0342c] transition"
           >
             Commencer l&#39;écoute
           </Link>
