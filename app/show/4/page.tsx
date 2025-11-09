@@ -1,5 +1,5 @@
 "use client";
-import Player from "@madzadev/audio-player";
+import PlayerFromLib from "@madzadev/audio-player";
 import "@madzadev/audio-player/dist/index.css";
 
 const tracks = [
@@ -24,6 +24,7 @@ const colors = {
 };
 
 const FourthShow = () => {
+  const Player = PlayerFromLib as React.ElementType;
   return (
     <div className="flex flex-col items-center justify-center text-[#2d1707] gap-8">
       <Player
