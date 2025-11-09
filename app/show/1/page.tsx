@@ -5,14 +5,27 @@ import "@madzadev/audio-player/dist/index.css";
 const tracks = [
   {
     url: "/audio/show_1.wav",
-    title: "Culture Pop - Emission 20/20/2014",
+    title: "Culture Pop - Emission 08/11/2015",
     tags: [],
   },
 ];
 
+const colors = {
+  playerBackground: "#bfa78b",
+  titleColor: "#3a2b21",
+  timeColor: "#ffffff",
+  progressSlider: "#cf392c",
+  progressUsed: "#3a2b21",
+  progressLeft: "#ffffff",
+  bufferLoaded: "#7a5f45",
+  volumeSlider: "#cf392c",
+  volumeUsed: "#3a2b21",
+  volumeLeft: "#3a2b21",
+};
+
 const FirstShow = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-[#2d1707]">
+    <div className="flex flex-col items-center justify-center text-[#2d1707] gap-8">
       <Player
         trackList={tracks}
         includeTags={false}
@@ -20,6 +33,7 @@ const FirstShow = () => {
         showPlaylist={false}
         sortTracks={false}
         autoPlayNextTrack={false}
+        customColorScheme={colors}
       />
     </div>
   );
