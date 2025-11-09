@@ -6,7 +6,6 @@ export default function Home() {
     <div className="flex min-h-screen items-center justify-center">
       <main className="flex min-h-screen w-full max-w-2xl flex-col items-center justify-center px-16! gap-10!">
         <Image
-          className="dark:invert"
           src={"/radio.svg"}
           alt="Radio Gossip Logo"
           width={500}

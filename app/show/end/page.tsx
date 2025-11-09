@@ -5,7 +5,7 @@ import "@madzadev/audio-player/dist/index.css";
 const tracks = [
   {
     url: "/audio/end.wav",
-    title: "The End",
+    title: "Culture Pop - The End",
     tags: [],
   },
 ];

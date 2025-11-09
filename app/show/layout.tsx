@@ -9,6 +9,7 @@ export default function ShowLayout({
 }>) {
   const router = useRouter();
   const pathname = usePathname();
+  const isTheEndPage = pathname === "/show/end";
 
   const onNextPage = useCallback(() => {
     const pathElements = pathname.split("/");
@@ -20,7 +21,7 @@ export default function ShowLayout({
       else return router.push(`/show/${numberlastElement + 1}`);
     } else {
       const questionNumber = parseInt(pathElements.pop() || "1");
-      if (questionNumber === 6) return router.push("/end");
+      if (questionNumber === 6) return router.push("/show/end");
       else return router.push(`/show/4/question/${questionNumber + 1}`);
     }
   }, [pathname, router]);
@@ -32,25 +33,28 @@ export default function ShowLayout({
           <Image src="/back.svg" alt="Back Arrow" width={42} height={42} />
         </button>
         <h1 className="text-2xl font-semibold">Radio Gossip</h1>
-        <button
-          onClick={onNextPage}
-          className="bg-[#cf392c] rotate-180 rounded-full text-lg font-semibold transition"
-        >
-          <Image
-            src="/back.svg"
-            alt="Back Arrow"
-            width={42}
-            height={42}
-            style={{
-              filter: "invert(100%)",
-            }}
-          />
-        </button>
+        {isTheEndPage ? (
+          <div />
+        ) : (
+          <button
+            onClick={onNextPage}
+            className="bg-[#cf392c] rotate-180 rounded-full text-lg font-semibold transition"
+          >
+            <Image
+              src="/back.svg"
+              alt="Back Arrow"
+              width={42}
+              height={42}
+              style={{
+                filter: "invert(100%)",
+              }}
+            />
+          </button>
+        )}
       </header>
       <div className="flex min-h-screen items-center justify-center">
-        <main className="flex min-h-screen w-full max-w-2xl flex-col items-center justify-center px-8! gap-10">
+        <main className="flex min-h-screen w-full max-w-4xl flex-col items-center justify-center px-8! gap-10">
           <Image
-            className="dark:invert"
             src={"/radio.svg"}
             alt="Radio Gossip Logo"
             width={500}
