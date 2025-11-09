@@ -1,4 +1,5 @@
 "use client";
+import { AudioRecorder } from "@/component/recorder";
 import PlayerFromLib from "@madzadev/audio-player";
 import "@madzadev/audio-player/dist/index.css";
 
@@ -36,6 +37,7 @@ const Question6 = () => {
         autoPlayNextTrack={false}
         customColorScheme={colors}
       />
+      <AudioRecorder filePrefix="question_6" />
     </div>
   );
 };
